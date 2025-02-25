@@ -1,0 +1,105 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+    color: #007bff; /* Blue text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  header .logo {
+    font-size: 2.5em; /* Increased size */
+    color: #007bff; /* Blue logo */
+    margin-bottom: 20px;
+  }
+  
+  .login-form {
+    background: #f4f4f4; /* Light gray background for form */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form input,
+  .login-form select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    font-size: 1em;
+    border: none;
+    border-radius: 6px;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .login-form input:focus,
+  .login-form select:focus {
+    outline: 2px solid #007bff; /* Blue focus outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow on focus */
+  }
+  
+  .login-form button {
+    width: 100%;
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    margin: 20px 0;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .login-form p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #666; /* Dark gray text */
+  }
+  
+  .login-form a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-form a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Trainer and User Fields */
+  #trainer-fields,
+  #user-fields {
+    margin-top: 12px;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      width: 90%; /* Makes the container fill more space on small screens */
+    }
+  
+    header .logo {
+      font-size: 2em; /* Reduce the font size of the title on smaller screens */
+    }
+  
+    .login-form {
+      padding: 15px; /* Reduce padding for smaller devices */
+    }
+  }

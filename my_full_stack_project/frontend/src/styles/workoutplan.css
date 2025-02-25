@@ -1,0 +1,89 @@
+/* Workout Plan Table */
+.table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #007bff; /* Blue border */
+    padding: 12px;
+    text-align: left;
+    font-size: 1.4em; /* Increased font size */
+  }
+  
+  th {
+    background-color: white; /* White background for headers */
+    color: #007bff; /* Blue text for headers */
+    font-size: 1.4em; /* Bigger header text */
+  }
+  
+  td {
+    background-color: #e6f2ff; /* Light blue background for table cells */
+  }
+  
+  /* View Selected Plans Button */
+  #view-selected-plans-btn {
+    display: none; /* Hidden initially */
+    padding: 12px 22px;
+    font-size: 1.4em; /* Bigger button text */
+  }
+  
+  /* Heading Style */
+  h2 {
+    text-align: center;
+    font-size: 2.2em; /* Increased heading size */
+    color: #007bff; /* Blue color for headings */
+    margin-bottom: 20px;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Darkened background for modal */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white; /* White background for modal */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #007bff; /* Blue text inside modal */
+    font-size: 1.4em; /* Bigger modal text */
+  }
+  
+  .modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-buttons button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.4em; /* Bigger button text */
+  }
+  
+  #confirm-signout {
+    background-color: #007bff; /* Blue background for confirm button */
+    color: white; /* White text */
+  }
+  
+  #cancel-signout {
+    background-color: #cce5ff; /* Light blue background for cancel button */
+    color: #007bff; /* Blue text */
+  }
+  

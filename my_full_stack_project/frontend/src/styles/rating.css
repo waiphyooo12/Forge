@@ -1,0 +1,100 @@
+/* Rating Page Styling */
+
+/* General Button Styling */
+.btn {
+    margin-top: 20px;
+    padding: 14px 28px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.4em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    color: #f8f9fa; /* Optional text color change on hover */
+}
+
+.btn:active {
+    transform: scale(0.98); /* Slight scale effect on button press */
+}
+
+/* Main Rating Container */
+.rating-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.rating-container h2 {
+    color: #007bff;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+/* Rating Box Styling */
+.rating-box {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #e6f2ff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.rating-box p {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Star Rating Design */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 14px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 3.5em;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #007bff;
+}
+
+.rating label:hover {
+    transform: scale(1.1); /* Slightly enlarge the stars on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rating-box {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .rating-container h2 {
+        font-size: 1.8em;
+    }
+
+    .rating-box p {
+        font-size: 1.2em;
+    }
+
+    .rating label {
+        font-size: 3em;
+    }
+}

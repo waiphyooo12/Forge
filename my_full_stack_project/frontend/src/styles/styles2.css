@@ -1,0 +1,198 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white; /* White background */
+  color: #007bff; /* Blue text */
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #e6f2ff; /* Light blue for the sidebar */
+  width: 250px;
+  min-width: 250px; /* Fixed size to avoid shrinking */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.sidebar .logo {
+  font-size: 1.5em;
+  color: #007bff; /* Blue color */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #007bff; /* Blue text */
+  text-decoration: none;
+  font-size: 1.4em;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  background-color: white; /* White background */
+}
+
+.sidebar ul li a:hover {
+  background-color: #cce5ff; /* Light blue on hover */
+}
+
+/* Main Content */
+main {
+  margin-left: 250px; /* Space for the sidebar */
+  padding: 40px;
+  background-color: white; /* Main content background */
+  width: calc(100% - 250px); /* Full width minus sidebar */
+  overflow-y: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #007bff; /* Blue for headings */
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #e6f2ff; /* Light blue background */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #007bff; /* Blue label color */
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #cce5ff; /* Light blue border */
+  border-radius: 5px;
+  background-color: white; /* White background */
+  color: #007bff; /* Blue text */
+}
+
+input:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white; /* White background */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: #007bff; /* Blue text */
+  width: 300px;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#confirm-signout {
+  background-color: #007bff; /* Blue background */
+  color: white;
+}
+
+#confirm-signout:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+#cancel-signout {
+  background-color: #e6f2ff; /* Light blue background */
+  color: #007bff; /* Blue text */
+}
+
+#cancel-signout:hover {
+  background-color: #cce5ff; /* Slightly darker light blue on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px; /* Adjust sidebar width */
+  }
+  main {
+      margin-left: 200px; /* Adjust content area */
+      width: calc(100% - 200px);
+  }
+}

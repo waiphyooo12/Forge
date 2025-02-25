@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white; /* Changed background to white */
+  color: #007bff; /* Blue text */
+  height: 100vh;
+  display: flex;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #e6f2ff; /* Light blue for the sidebar */
+  width: 250px;
+  min-width: 250px; /* Fixed size */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+/* Logo */
+.sidebar .logo {
+  font-size: 1.5em; /* Increased font size */
+  color: #007bff; /* Blue text */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Sidebar Links */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #007bff; /* Blue text */
+  text-decoration: none;
+  font-size: 1.4em;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  background-color: white; /* White background */
+}
+
+.sidebar ul li a:hover {
+  background-color: #cce5ff; /* Lighter blue */
+}
+
+/* Main Content */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 250px); /* Adjust width to account for sidebar */
+  margin-left: 250px; /* Push content away from sidebar */
+  padding: 20px;
+  position: relative; /* Ensure elements are positioned properly */
+}
+
+/* Form Section */
+.form-section {
+  flex: 1;
+  background: #e6f2ff; /* Light blue background */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for separation */
+}
+
+/* Form Title */
+.form-section h1 {
+  margin-bottom: 20px;
+  font-size: 2em; /* Increased font size */
+  color: #007bff; /* Blue text */
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px; /* Increased spacing */
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.2em; /* Bigger labels */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 5px;
+  border: 1px solid #007bff; /* Blue border */
+  background-color: white;
+  font-size: 1.2em; /* Bigger input text */
+  color: #007bff;
+}
+
+/* Confirm Button */
+button {
+  background-color: #007bff; /* Blue button */
+  color: white;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.3em; /* Bigger button text */
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+/* Adjust for layout of sidebar and main content */
+.main-container {
+  width: calc(100% - 250px); /* Adjust content width for sidebar */
+  margin-left: 250px; /* Align with sidebar */
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    min-width: 200px;
+  }
+
+  .main-container {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    min-width: 100%;
+  }
+
+  .main-container {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .form-section {
+    max-width: 90%;
+    padding: 20px;
+  }
+}
